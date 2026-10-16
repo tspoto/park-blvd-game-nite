@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Park Blvd Game Nite</title>
+<meta name="description" content="Board games once a month all winter. Vote on what we play and when, and come when you can.">
+<meta name="theme-color" content="#3F3A60">
+<link rel="icon" href="assets/die.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href="./">
+      <img class="brand__mark" src="assets/die.svg" alt="">
+      <span class="brand__text">
+        <span class="brand__name">Park Blvd Game Nite</span>
+        <span class="brand__season" data-season></span>
+      </span>
+    </a>
+    <nav class="tabs" aria-label="Pages">
+      <a class="tab" href="./" aria-current="page">Home</a>
+      <a class="tab" href="games.html">Games</a>
+      <a class="tab" href="vote.html">Vote</a>
+    </nav>
+  </div>
+</header>
+<main class="main">
+  <section class="intro">
+    <h1>Board games, once a month, all winter</h1>
+    <p class="lede">Vote on what we play and when. Come to every night or just one. Every game gets taught at the table, so nobody needs to know the rules ahead of time.</p>
+  </section>
+
+  <div id="next"><p class="empty">Loading the schedule…</p></div>
+
+  <section class="panel" aria-labelledby="howH">
+    <div class="section-head">
+      <span class="eyebrow">Every month</span>
+      <h2 id="howH">How it works</h2>
+    </div>
+    <ol class="steps">
+      <li><b>Vote for games and Saturdays</b><p>Every Saturday of the month is on the ballot, minus holiday weekends. Pick your top three games and every Saturday that might work. Voting isn't a promise to come.</p></li>
+      <li><b>Vote early, update anytime</b><p>Each month's voting opens about five weeks ahead, so you can plan around it. As your schedule firms up, vote again with the same name to update your ballot.</p></li>
+      <li><b>The date gets set</b><p>Voting closes on a Wednesday, 10 days before the month's first Saturday. The Saturday the most people can make wins, and it shows up here along with who's hosting.</p></li>
+      <li><b>Come if you can</b><p>No RSVP needed. If your plans change, that's fine.</p></li>
+      <li><b>Play what fits the table</b><p>We start with the highest-voted game that fits the people who show up. If more people come than a game allows, we partner up. A good problem to have.</p></li>
+    </ol>
+  </section>
+
+  <section class="panel" aria-labelledby="flexH">
+    <div class="section-head">
+      <span class="eyebrow">No commitment</span>
+      <h2 id="flexH">Come when you can</h2>
+    </div>
+    <div class="points">
+      <p><b>Drop in, drop out.</b>Come in December, skip January, come back in March. Nobody's keeping track.</p>
+      <p><b>New to board games?</b>Every game gets taught as we play, and the ballot always has quick, easy options.</p>
+      <p><b>Into the heavy stuff?</b>Vote for it. If enough people want a big game, it makes the lineup.</p>
+      <p><b>Want to host or share games?</b><span data-organizer></span> are hosting for now. If game night catches on, hosting can rotate and anyone's games can go on the ballot. Let <span data-organizer></span> know if you're interested.</p>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="seasonH">
+    <div class="section-head">
+      <span class="eyebrow" data-season></span>
+      <h2 id="seasonH">The season</h2>
+    </div>
+    <ul class="season" id="season"></ul>
+  </section>
+
+</main>
+<script src="assets/config.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>

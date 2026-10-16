@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Games · Park Blvd Game Nite</title>
+<meta name="description" content="Every game on the shelf, with player counts, play time and how-to videos.">
+<meta name="theme-color" content="#3F3A60">
+<link rel="icon" href="assets/die.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href="./">
+      <img class="brand__mark" src="assets/die.svg" alt="">
+      <span class="brand__text">
+        <span class="brand__name">Park Blvd Game Nite</span>
+        <span class="brand__season" data-season></span>
+      </span>
+    </a>
+    <nav class="tabs" aria-label="Pages">
+      <a class="tab" href="./">Home</a>
+      <a class="tab" href="games.html" aria-current="page">Games</a>
+      <a class="tab" href="vote.html">Vote</a>
+    </nav>
+  </div>
+</header>
+<main class="main">
+  <section class="intro">
+    <h1>The games</h1>
+    <p class="lede">Everything on the shelf, expansions included. Pick a difficulty to find your speed, watch a quick how-to video, and add up to three games to your ballot.</p>
+  </section>
+
+  <section class="filters" aria-label="Filters">
+    <input id="q" type="search" placeholder="Search games" aria-label="Search games" autocomplete="off">
+    <div class="chip-group">
+      <span class="eyebrow">Difficulty</span>
+      <div class="chip-wrap" id="fWeight"></div>
+    </div>
+    <details class="more" id="more">
+      <summary id="moreLabel">More filters</summary>
+      <div class="more__body">
+        <div class="chip-group"><span class="eyebrow">Players</span><div class="chip-wrap" id="fPlayers"></div></div>
+        <div class="chip-group"><span class="eyebrow">Time</span><div class="chip-wrap" id="fTime"></div></div>
+        <div class="chip-group"><span class="eyebrow">Style</span><div class="chip-wrap" id="fStyle"></div></div>
+      </div>
+    </details>
+    <div class="count-row">
+      <span class="count" id="count" aria-live="polite"></span>
+      <button type="button" class="text-link" id="clear" hidden>Clear filters</button>
+    </div>
+  </section>
+
+  <section class="list" id="list" aria-label="Games"><p class="empty">Loading the shelf…</p></section>
+
+  <footer class="foot">Difficulty follows the BoardGameGeek weight scale, from 1 (very light) to 5 (very heavy). Player counts include expansions, so Pandemic shows up for 5 players. Two-player games stay on the shelf but aren't on the ballot.</footer>
+</main>
+<div class="tray" id="tray" hidden>
+  <div class="tray__inner">
+    <span class="tray__text" id="trayText"></span>
+    <a class="btn btn--small" href="vote.html">Finish ballot</a>
+  </div>
+</div>
+<script src="assets/config.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/games.js"></script>
+</body>
+</html>

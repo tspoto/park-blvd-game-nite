@@ -1,0 +1,64 @@
+{
+ "example": false,
+ "rounds": [
+  {
+   "id": "2026-12",
+   "label": "December",
+   "votingOpens": "2026-10-16",
+   "votingCloses": "2026-11-25",
+   "options": [
+    "2026-12-05",
+    "2026-12-12",
+    "2026-12-19"
+   ],
+   "time": "7 pm",
+   "host": "Grace and Tony",
+   "where": ""
+  },
+  {
+   "id": "2027-01",
+   "label": "January",
+   "votingOpens": "2026-11-26",
+   "votingCloses": "2026-12-30",
+   "options": [
+    "2027-01-09",
+    "2027-01-16",
+    "2027-01-23",
+    "2027-01-30"
+   ],
+   "time": "7 pm",
+   "host": "Grace and Tony",
+   "where": ""
+  },
+  {
+   "id": "2027-02",
+   "label": "February",
+   "votingOpens": "2026-12-31",
+   "votingCloses": "2027-01-27",
+   "options": [
+    "2027-02-06",
+    "2027-02-13",
+    "2027-02-20",
+    "2027-02-27"
+   ],
+   "time": "7 pm",
+   "host": "Grace and Tony",
+   "where": ""
+  },
+  {
+   "id": "2027-03",
+   "label": "March",
+   "votingOpens": "2027-01-28",
+   "votingCloses": "2027-02-24",
+   "options": [
+    "2027-03-06",
+    "2027-03-13",
+    "2027-03-20",
+    "2027-03-27"
+   ],
+   "time": "7 pm",
+   "host": "Grace and Tony",
+   "where": ""
+  }
+ ]
+}

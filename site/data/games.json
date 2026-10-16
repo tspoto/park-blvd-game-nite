@@ -1,0 +1,1425 @@
+[
+ {
+  "id": "wingspan",
+  "name": "Wingspan",
+  "kind": "base",
+  "parent": null,
+  "publisher": "Stonemaier Games",
+  "players": [
+   1,
+   5
+  ],
+  "time": [
+   40,
+   70
+  ],
+  "age": 14,
+  "weight": 2.5,
+  "style": "Competitive",
+  "tags": [
+   "Engine building",
+   "Card drafting",
+   "Solo mode"
+  ],
+  "notes": "Attract birds to your preserves and build an engine that gets stronger every round. Relaxed pace with plenty to think about.",
+  "bgg": 266192
+ },
+ {
+  "id": "wingspan-oceania",
+  "name": "Wingspan: Oceania Expansion",
+  "kind": "expansion",
+  "parent": "wingspan",
+  "publisher": "Stonemaier Games",
+  "players": [
+   1,
+   5
+  ],
+  "time": [
+   40,
+   70
+  ],
+  "age": 14,
+  "weight": 2.5,
+  "style": "Competitive",
+  "tags": [
+   "Expansion"
+  ],
+  "notes": "Adds Oceania birds, nectar as a new food, and new player boards. Requires the base game."
+ },
+ {
+  "id": "wingspan-europe",
+  "name": "Wingspan: European Expansion",
+  "kind": "expansion",
+  "parent": "wingspan",
+  "publisher": "Stonemaier Games",
+  "players": [
+   1,
+   5
+  ],
+  "time": [
+   40,
+   70
+  ],
+  "age": 14,
+  "weight": 2.4,
+  "style": "Competitive",
+  "tags": [
+   "Expansion"
+  ],
+  "notes": "Adds European birds with new powers and a deck of end-of-round goals. Requires the base game."
+ },
+ {
+  "id": "wingspan-asia",
+  "name": "Wingspan Asia",
+  "kind": "standalone",
+  "parent": "wingspan",
+  "publisher": "Stonemaier Games",
+  "players": [
+   1,
+   2
+  ],
+  "time": [
+   40,
+   70
+  ],
+  "age": 14,
+  "weight": 2.4,
+  "style": "Competitive",
+  "tags": [
+   "Standalone",
+   "2-player"
+  ],
+  "notes": "Plays on its own for 1–2 players, or combines with base Wingspan for up to 7."
+ },
+ {
+  "id": "pandemic",
+  "name": "Pandemic",
+  "kind": "base",
+  "parent": null,
+  "publisher": "Z-Man Games",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   45,
+   45
+  ],
+  "age": 8,
+  "weight": 2.4,
+  "style": "Co-op",
+  "tags": [
+   "Hand management",
+   "Set collection"
+  ],
+  "notes": "Work together to treat four diseases before outbreaks spread out of control. Everyone wins or loses as a team.",
+  "bgg": 30549
+ },
+ {
+  "id": "pandemic-brink",
+  "name": "Pandemic: On the Brink",
+  "kind": "expansion",
+  "parent": "pandemic",
+  "publisher": "Z-Man Games",
+  "players": [
+   2,
+   5
+  ],
+  "time": [
+   45,
+   60
+  ],
+  "age": 8,
+  "weight": 2.6,
+  "style": "Co-op",
+  "tags": [
+   "Expansion"
+  ],
+  "notes": "Adds new roles, tougher challenges, and room for a fifth player. Requires the base game."
+ },
+ {
+  "id": "abducktion",
+  "name": "Abducktion",
+  "kind": "base",
+  "parent": null,
+  "publisher": "Very Special Games",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   15,
+   20
+  ],
+  "age": 12,
+  "weight": 1.4,
+  "style": "Competitive",
+  "tags": [
+   "Pattern building",
+   "Quick"
+  ],
+  "notes": "Rearrange plastic ducks into patterns so an alien UFO can beam them up. Takes about two minutes to learn."
+ },
+ {
+  "id": "abducktion-exp",
+  "name": "Abducktion: IntergalacDuck Research Expansion",
+  "kind": "expansion",
+  "parent": "abducktion",
+  "publisher": "Very Special Games",
+  "players": [
+   2,
+   6
+  ],
+  "time": [
+   25,
+   35
+  ],
+  "age": 12,
+  "weight": 1.6,
+  "style": "Competitive",
+  "tags": [
+   "Expansion"
+  ],
+  "notes": "Adds research pods, harder patterns, and room for up to six players. Requires the base game."
+ },
+ {
+  "id": "hogwarts-battle",
+  "name": "Harry Potter: Hogwarts Battle",
+  "kind": "base",
+  "parent": null,
+  "publisher": "USAopoly / The Op",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   30,
+   60
+  ],
+  "age": 11,
+  "weight": 2.3,
+  "style": "Co-op",
+  "tags": [
+   "Deck building",
+   "Campaign"
+  ],
+  "notes": "Team up as Harry, Ron, Hermione, and Neville, building decks to fight off villains. Seven unlockable years ramp up the difficulty.",
+  "bgg": 199042
+ },
+ {
+  "id": "hogwarts-battle-exp",
+  "name": "Harry Potter: Hogwarts Battle: The Monster Box of Monsters",
+  "kind": "expansion",
+  "parent": "hogwarts-battle",
+  "publisher": "USAopoly / The Op",
+  "players": [
+   2,
+   5
+  ],
+  "time": [
+   30,
+   60
+  ],
+  "age": 11,
+  "weight": 2.5,
+  "style": "Co-op",
+  "tags": [
+   "Expansion"
+  ],
+  "notes": "Adds Luna Lovegood as a fifth hero, plus creatures, encounters, and detention cards. Requires the base game."
+ },
+ {
+  "id": "smash-up",
+  "name": "Smash Up",
+  "kind": "base",
+  "parent": null,
+  "publisher": "AEG",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   45,
+   60
+  ],
+  "age": 12,
+  "weight": 2.1,
+  "style": "Competitive",
+  "tags": [
+   "Area control",
+   "Hand management"
+  ],
+  "notes": "Pick two factions, shuffle them into one deck, and fight for control of bases. This collection includes every set below, stored together in one box.",
+  "bgg": 122522,
+  "lookup": "Smash Up"
+ },
+ {
+  "id": "smash-up-core",
+  "name": "Smash Up: Core Set",
+  "kind": "standalone",
+  "parent": "smash-up",
+  "publisher": "AEG",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   45,
+   45
+  ],
+  "age": 12,
+  "weight": 2.1,
+  "style": "Competitive",
+  "tags": [
+   "Base game"
+  ],
+  "notes": "The original set, with Aliens, Dinosaurs, Ninjas, Pirates, Robots, Tricksters, Wizards, and Zombies. Plays on its own."
+ },
+ {
+  "id": "smash-up-awesome-level-9000",
+  "name": "Smash Up: Awesome Level 9000",
+  "kind": "expansion",
+  "parent": "smash-up",
+  "publisher": "AEG",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   45,
+   45
+  ],
+  "age": 12,
+  "weight": 2.1,
+  "style": "Competitive",
+  "tags": [
+   "Expansion"
+  ],
+  "notes": "Adds Bear Cavalry, Ghosts, Killer Plants, and Steampunks."
+ },
+ {
+  "id": "smash-up-sci-fi-double-feature",
+  "name": "Smash Up: Science Fiction Double Feature",
+  "kind": "expansion",
+  "parent": "smash-up",
+  "publisher": "AEG",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   45,
+   45
+  ],
+  "age": 12,
+  "weight": 2.1,
+  "style": "Competitive",
+  "tags": [
+   "Expansion"
+  ],
+  "notes": "Adds Cyborg Apes, Shapeshifters, Super Spies, and Time Travelers."
+ },
+ {
+  "id": "smash-up-pretty-pretty",
+  "name": "Pretty Pretty Smash Up",
+  "kind": "expansion",
+  "parent": "smash-up",
+  "publisher": "AEG",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   45,
+   45
+  ],
+  "age": 12,
+  "weight": 2.1,
+  "style": "Competitive",
+  "tags": [
+   "Expansion"
+  ],
+  "notes": "Adds Fairies, Kitty Cats, Mythic Horses, and Princesses."
+ },
+ {
+  "id": "smash-up-its-your-fault",
+  "name": "Smash Up: It's Your Fault!",
+  "kind": "expansion",
+  "parent": "smash-up",
+  "publisher": "AEG",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   45,
+   45
+  ],
+  "age": 12,
+  "weight": 2.1,
+  "style": "Competitive",
+  "tags": [
+   "Expansion"
+  ],
+  "notes": "Adds Dragons, Mythic Greeks, Sharks, Superheroes, and the bonus Tornadoes faction."
+ },
+ {
+  "id": "smash-up-cease-and-desist",
+  "name": "Smash Up: Cease and Desist",
+  "kind": "expansion",
+  "parent": "smash-up",
+  "publisher": "AEG",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   45,
+   45
+  ],
+  "age": 12,
+  "weight": 2.1,
+  "style": "Competitive",
+  "tags": [
+   "Expansion"
+  ],
+  "notes": "Adds Astroknights, Changerbots, Ignobles, and Star Roamers."
+ },
+ {
+  "id": "smash-up-big-in-japan",
+  "name": "Smash Up: Big in Japan",
+  "kind": "expansion",
+  "parent": "smash-up",
+  "publisher": "AEG",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   45,
+   45
+  ],
+  "age": 12,
+  "weight": 2.1,
+  "style": "Competitive",
+  "tags": [
+   "Expansion"
+  ],
+  "notes": "Adds Itty Critters, Kaiju, Magical Girls, and Mega Troopers."
+ },
+ {
+  "id": "smash-up-world-tour",
+  "name": "Smash Up: World Tour: International Incident",
+  "kind": "expansion",
+  "parent": "smash-up",
+  "publisher": "AEG",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   45,
+   45
+  ],
+  "age": 12,
+  "weight": 2.1,
+  "style": "Competitive",
+  "tags": [
+   "Expansion"
+  ],
+  "notes": "Adds Luchadores, Mounties, Musketeers, and Sumo Wrestlers."
+ },
+ {
+  "id": "smash-up-geekier-box",
+  "name": "Smash Up: The Bigger Geekier Box",
+  "kind": "expansion",
+  "parent": "smash-up",
+  "publisher": "AEG",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   45,
+   45
+  ],
+  "age": 12,
+  "weight": 2.1,
+  "style": "Competitive",
+  "tags": [
+   "Expansion",
+   "Storage"
+  ],
+  "notes": "Adds the Geeks and All-Stars factions, plus the box that holds the whole collection and the complete rulebook."
+ },
+ {
+  "id": "smash-up-disney",
+  "name": "Smash Up: Disney Edition",
+  "kind": "standalone",
+  "parent": "smash-up",
+  "publisher": "The Op / AEG",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   30,
+   60
+  ],
+  "age": 14,
+  "weight": 2.0,
+  "style": "Competitive",
+  "tags": [
+   "Standalone set"
+  ],
+  "notes": "A standalone set with eight Disney factions, from Frozen to The Nightmare Before Christmas.",
+  "bgg": 358515
+ },
+ {
+  "id": "smash-up-munchkin",
+  "name": "Smash Up: Munchkin",
+  "kind": "standalone",
+  "parent": "smash-up",
+  "publisher": "AEG / Steve Jackson Games",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   45,
+   45
+  ],
+  "age": 12,
+  "weight": 2.1,
+  "style": "Competitive",
+  "tags": [
+   "Standalone set"
+  ],
+  "notes": "A standalone set that adds monsters to fight and treasure to win. Mixing it in changes how every game plays."
+ },
+ {
+  "id": "smash-up-marvel",
+  "name": "Smash Up: Marvel",
+  "kind": "standalone",
+  "parent": "smash-up",
+  "publisher": "The Op / AEG",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   30,
+   60
+  ],
+  "age": 14,
+  "weight": 2.1,
+  "style": "Competitive",
+  "tags": [
+   "Standalone set"
+  ],
+  "notes": "A standalone set with Marvel hero and villain factions."
+ },
+ {
+  "id": "pandemic-legacy-s1",
+  "name": "Pandemic Legacy: Season 1",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Z-Man Games",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   60,
+   60
+  ],
+  "age": 14,
+  "weight": 2.8,
+  "style": "Co-op",
+  "tags": [
+   "Campaign",
+   "Legacy",
+   "In progress"
+  ],
+  "notes": "A Pandemic campaign where every game permanently changes the board. This campaign is four months in, and new players can join at any point.",
+  "bgg": 161936
+ },
+ {
+  "id": "ticket-to-ride",
+  "name": "Ticket to Ride",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Days of Wonder",
+  "players": [
+   2,
+   5
+  ],
+  "time": [
+   30,
+   60
+  ],
+  "age": 8,
+  "weight": 1.8,
+  "style": "Competitive",
+  "tags": [
+   "Route building",
+   "Gateway"
+  ],
+  "notes": "Collect train cards and claim routes across North America. One of the easiest big games to teach.",
+  "bgg": 9209
+ },
+ {
+  "id": "ticket-to-ride-europe",
+  "name": "Ticket to Ride: Europe",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Days of Wonder",
+  "players": [
+   2,
+   5
+  ],
+  "time": [
+   30,
+   60
+  ],
+  "age": 8,
+  "weight": 1.9,
+  "style": "Competitive",
+  "tags": [
+   "Route building",
+   "Gateway",
+   "Unplayed"
+  ],
+  "notes": "Claim routes across Europe, with tunnels, ferries, and train stations. Still sealed and ready for its first game.",
+  "bgg": 14996
+ },
+ {
+  "id": "catan",
+  "name": "Catan",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Catan Studio",
+  "players": [
+   3,
+   4
+  ],
+  "time": [
+   60,
+   120
+  ],
+  "age": 10,
+  "weight": 2.3,
+  "style": "Competitive",
+  "tags": [
+   "Trading",
+   "Dice rolling"
+  ],
+  "notes": "Trade resources and build roads and settlements across the island. Expect plenty of bargaining.",
+  "bgg": 13
+ },
+ {
+  "id": "catan-5-6",
+  "name": "Catan: 5–6 Player Extension",
+  "kind": "expansion",
+  "parent": "catan",
+  "publisher": "Catan Studio",
+  "players": [
+   5,
+   6
+  ],
+  "time": [
+   90,
+   120
+  ],
+  "age": 10,
+  "weight": 2.3,
+  "style": "Competitive",
+  "tags": [
+   "Expansion"
+  ],
+  "notes": "Adds the pieces and tiles for a fifth and sixth player. Requires the base game."
+ },
+ {
+  "id": "catan-starfarers",
+  "name": "Catan: Starfarers",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Catan Studio",
+  "players": [
+   3,
+   4
+  ],
+  "time": [
+   120,
+   120
+  ],
+  "age": 14,
+  "weight": 2.7,
+  "style": "Competitive",
+  "tags": [
+   "Trading",
+   "Exploration"
+  ],
+  "notes": "Fly ships through space, trade with alien civilizations, and found colonies. A longer, bigger take on Catan."
+ },
+ {
+  "id": "seven-wonders-duel",
+  "name": "7 Wonders Duel",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Repos Production",
+  "players": [
+   2,
+   2
+  ],
+  "time": [
+   30,
+   30
+  ],
+  "age": 10,
+  "weight": 2.2,
+  "style": "Competitive",
+  "tags": [
+   "2-player",
+   "Card drafting"
+  ],
+  "notes": "Draft cards to build a civilization and race to one of three ways to win. A two-player game.",
+  "bgg": 173346
+ },
+ {
+  "id": "sky-team",
+  "name": "Sky Team",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Le Scorpion Masqué",
+  "players": [
+   2,
+   2
+  ],
+  "time": [
+   15,
+   20
+  ],
+  "age": 12,
+  "weight": 2.0,
+  "style": "Co-op",
+  "tags": [
+   "2-player",
+   "Dice placement"
+  ],
+  "notes": "Land a plane together without talking, using dice to work the controls. A two-player game.",
+  "bgg": 373106
+ },
+ {
+  "id": "king-of-tokyo",
+  "name": "King of Tokyo",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "IELLO",
+  "players": [
+   2,
+   6
+  ],
+  "time": [
+   30,
+   30
+  ],
+  "age": 8,
+  "weight": 1.5,
+  "style": "Competitive",
+  "tags": [
+   "Dice rolling",
+   "Gateway"
+  ],
+  "notes": "Roll dice as giant monsters and battle for control of Tokyo. Fast, loud, and easy to teach.",
+  "bgg": 70323
+ },
+ {
+  "id": "parks",
+  "name": "Parks",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Keymaster Games",
+  "players": [
+   1,
+   5
+  ],
+  "time": [
+   40,
+   70
+  ],
+  "age": 10,
+  "weight": 2.2,
+  "style": "Competitive",
+  "tags": [
+   "Set collection",
+   "Solo mode"
+  ],
+  "notes": "Hike trails through four seasons, collecting tokens to visit national parks. Beautiful art and a relaxed pace.",
+  "bgg": 266524
+ },
+ {
+  "id": "forbidden-desert",
+  "name": "Forbidden Desert",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Gamewright",
+  "players": [
+   2,
+   5
+  ],
+  "time": [
+   45,
+   45
+  ],
+  "age": 10,
+  "weight": 2.1,
+  "style": "Co-op",
+  "tags": [
+   "Action points",
+   "Modular board"
+  ],
+  "notes": "Work together to dig up a lost flying machine before the sandstorm buries the team. Everyone wins or loses together.",
+  "bgg": 136063
+ },
+ {
+  "id": "hogwarts-dada",
+  "name": "Harry Potter: Hogwarts Battle: Defence Against the Dark Arts",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "USAopoly / The Op",
+  "players": [
+   2,
+   2
+  ],
+  "time": [
+   30,
+   45
+  ],
+  "age": 11,
+  "weight": 2.0,
+  "style": "Competitive",
+  "tags": [
+   "2-player",
+   "Deck building"
+  ],
+  "notes": "Duel head to head, building a deck of spells to stun your opponent. A two-player game."
+ },
+ {
+  "id": "hive",
+  "name": "Hive",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Gen42 Games",
+  "players": [
+   2,
+   2
+  ],
+  "time": [
+   20,
+   20
+  ],
+  "age": 9,
+  "weight": 2.3,
+  "style": "Competitive",
+  "tags": [
+   "2-player",
+   "Abstract"
+  ],
+  "notes": "Place and move bug tiles to surround the opposing queen. A two-player game with no board.",
+  "bgg": 2655
+ },
+ {
+  "id": "mysterium",
+  "name": "Mysterium",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Libellud",
+  "players": [
+   2,
+   7
+  ],
+  "time": [
+   45,
+   45
+  ],
+  "age": 10,
+  "weight": 1.9,
+  "style": "Co-op",
+  "tags": [
+   "Deduction",
+   "Picture clues"
+  ],
+  "notes": "One player is a silent ghost sending dream cards, and everyone else works out the murder from the clues. Works well with a big group.",
+  "bgg": 181304
+ },
+ {
+  "id": "arkham-lcg",
+  "name": "Arkham Horror: The Card Game",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Fantasy Flight Games",
+  "players": [
+   1,
+   2
+  ],
+  "time": [
+   60,
+   120
+  ],
+  "age": 14,
+  "weight": 3.5,
+  "style": "Co-op",
+  "tags": [
+   "Campaign",
+   "Deck building"
+  ],
+  "notes": "Investigate cosmic horror through a story campaign, building decks along the way. A two-player game, and the heaviest on the shelf.",
+  "bgg": 205637
+ },
+ {
+  "id": "lotr-lcg",
+  "name": "The Lord of the Rings: The Card Game",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Fantasy Flight Games",
+  "players": [
+   1,
+   2
+  ],
+  "time": [
+   30,
+   120
+  ],
+  "age": 13,
+  "weight": 3.2,
+  "style": "Co-op",
+  "tags": [
+   "Campaign",
+   "Deck building"
+  ],
+  "notes": "Quest through Middle-earth together, building decks of heroes and allies. A two-player game.",
+  "bgg": 77423
+ },
+ {
+  "id": "anatomy-park",
+  "name": "Rick and Morty: Anatomy Park",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Cryptozoic",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   30,
+   60
+  ],
+  "age": 18,
+  "weight": 2.2,
+  "style": "Competitive",
+  "tags": [
+   "Tile placement",
+   "Adult humor"
+  ],
+  "notes": "Build a theme park inside a human body while diseases break loose. Based on the Rick and Morty episode, with adult humor."
+ },
+ {
+  "id": "back-to-the-future",
+  "name": "Back to the Future: Back in Time",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Funko Games",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   50,
+   50
+  ],
+  "age": 10,
+  "weight": 2.3,
+  "style": "Co-op",
+  "tags": [
+   "Dice rolling",
+   "Movie theme"
+  ],
+  "notes": "Work together to fix the DeLorean and get Marty's parents together before 10:04 pm. Tough to win the first few times."
+ },
+ {
+  "id": "jurassic-park-danger",
+  "name": "Jurassic Park: Danger!",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Ravensburger",
+  "players": [
+   2,
+   5
+  ],
+  "time": [
+   50,
+   50
+  ],
+  "age": 10,
+  "weight": 2.0,
+  "style": "One vs. many",
+  "tags": [
+   "Hidden movement",
+   "Movie theme"
+  ],
+  "notes": "One player controls the dinosaurs while everyone else tries to escape Isla Nublar. Based on the original movie.",
+  "bgg": 245431
+ },
+ {
+  "id": "clue-tudor",
+  "name": "Clue: Treachery at Tudor Mansion",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Hasbro",
+  "players": [
+   1,
+   6
+  ],
+  "time": [
+   60,
+   90
+  ],
+  "age": 10,
+  "weight": 1.9,
+  "style": "Co-op",
+  "tags": [
+   "Escape room",
+   "One-time play",
+   "Unplayed"
+  ],
+  "notes": "Explore a mansion escape-room style, then solve a Clue mystery with what you find. Can only be played once.",
+  "bgg": 369483
+ },
+ {
+  "id": "qwirkle",
+  "name": "Qwirkle",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "MindWare",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   30,
+   45
+  ],
+  "age": 6,
+  "weight": 1.6,
+  "style": "Competitive",
+  "tags": [
+   "Tile matching",
+   "Family"
+  ],
+  "notes": "Match colors and shapes to build rows of tiles. Simple rules with real strategy.",
+  "bgg": 25669
+ },
+ {
+  "id": "qwirkle-rummy",
+  "name": "Qwirkle Rummy",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "MindWare",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   20,
+   30
+  ],
+  "age": 8,
+  "weight": 1.5,
+  "style": "Competitive",
+  "tags": [
+   "Card game",
+   "Set collection"
+  ],
+  "notes": "Build sets of matching shapes or colors, rummy style. The card version of Qwirkle."
+ },
+ {
+  "id": "codenames",
+  "name": "Codenames",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Czech Games Edition",
+  "players": [
+   2,
+   8
+  ],
+  "time": [
+   15,
+   15
+  ],
+  "age": 14,
+  "weight": 1.3,
+  "style": "Teams",
+  "tags": [
+   "Word game",
+   "Party"
+  ],
+  "notes": "Split into two teams and give one-word clues to find your agents. Works well with a big group.",
+  "bgg": 178900
+ },
+ {
+  "id": "telestrations",
+  "name": "Telestrations: 6 Player Family Pack",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "USAopoly / The Op",
+  "players": [
+   4,
+   6
+  ],
+  "time": [
+   15,
+   20
+  ],
+  "age": 8,
+  "weight": 1.0,
+  "style": "Party",
+  "tags": [
+   "Drawing",
+   "Party"
+  ],
+  "notes": "Draw a word, pass it on, and guess what the next person drew. Telephone with sketchbooks.",
+  "bgg": 216798
+ },
+ {
+  "id": "horrible-therapist",
+  "name": "Horrible Therapist",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Exploding Kittens",
+  "players": [
+   3,
+   8
+  ],
+  "time": [
+   15,
+   15
+  ],
+  "age": 17,
+  "weight": 1.0,
+  "style": "Party",
+  "tags": [
+   "Party",
+   "Adult humor"
+  ],
+  "notes": "Build three-panel therapy comics from question, answer, and treatment cards. Adults only."
+ },
+ {
+  "id": "tapple",
+  "name": "Tapple",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "USAopoly / The Op",
+  "players": [
+   2,
+   8
+  ],
+  "time": [
+   10,
+   20
+  ],
+  "age": 8,
+  "weight": 1.1,
+  "style": "Party",
+  "tags": [
+   "Word game",
+   "Timer"
+  ],
+  "notes": "Name something in the category, tap the letter, and beat the timer. Quick rounds for any size group."
+ },
+ {
+  "id": "sequence",
+  "name": "Sequence",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Goliath",
+  "players": [
+   2,
+   12
+  ],
+  "time": [
+   20,
+   30
+  ],
+  "age": 7,
+  "weight": 1.3,
+  "style": "Teams",
+  "tags": [
+   "Card game",
+   "Family"
+  ],
+  "notes": "Play cards to place chips and make rows of five. Plays best in teams.",
+  "bgg": 2375
+ },
+ {
+  "id": "history-trivia",
+  "name": "HISTORY Channel Trivia Game",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Dyce Games",
+  "players": [
+   2,
+   10
+  ],
+  "time": [
+   25,
+   45
+  ],
+  "age": 14,
+  "weight": 1.2,
+  "style": "Party",
+  "tags": [
+   "Trivia"
+  ],
+  "notes": "Answer questions across five categories, from science to sports. There are two copies, so two tables can play at once."
+ },
+ {
+  "id": "risk",
+  "name": "Risk",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Hasbro",
+  "players": [
+   2,
+   5
+  ],
+  "time": [
+   90,
+   180
+  ],
+  "age": 10,
+  "weight": 2.1,
+  "style": "Competitive",
+  "tags": [
+   "Classic",
+   "Area control"
+  ],
+  "notes": "Build armies and conquer the world one territory at a time. Plan on a long night.",
+  "bgg": 181
+ },
+ {
+  "id": "monopoly",
+  "name": "Monopoly",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Hasbro",
+  "players": [
+   2,
+   6
+  ],
+  "time": [
+   60,
+   180
+  ],
+  "age": 8,
+  "weight": 1.6,
+  "style": "Competitive",
+  "tags": [
+   "Classic"
+  ],
+  "notes": "Buy properties, collect rent, and bankrupt everyone else. The classic.",
+  "bgg": 1406
+ },
+ {
+  "id": "battleship",
+  "name": "Battleship",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Milton Bradley",
+  "players": [
+   2,
+   2
+  ],
+  "time": [
+   20,
+   30
+  ],
+  "age": 7,
+  "weight": 1.2,
+  "style": "Competitive",
+  "tags": [
+   "Classic",
+   "2-player"
+  ],
+  "notes": "Hide a fleet and call shots to sink the other side's ships. A two-player game.",
+  "bgg": 2425
+ },
+ {
+  "id": "stratego",
+  "name": "Stratego",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Milton Bradley",
+  "players": [
+   2,
+   2
+  ],
+  "time": [
+   30,
+   60
+  ],
+  "age": 8,
+  "weight": 1.8,
+  "style": "Competitive",
+  "tags": [
+   "Classic",
+   "2-player"
+  ],
+  "notes": "Hide your army's ranks and capture the enemy flag. A two-player game.",
+  "bgg": 1917
+ },
+ {
+  "id": "yahtzee",
+  "name": "Yahtzee",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Hasbro",
+  "players": [
+   1,
+   10
+  ],
+  "time": [
+   20,
+   30
+  ],
+  "age": 8,
+  "weight": 1.2,
+  "style": "Competitive",
+  "tags": [
+   "Classic",
+   "Dice"
+  ],
+  "notes": "Roll five dice and fill the scorecard with the best combinations. Quick and easy for any group.",
+  "bgg": 2243
+ },
+ {
+  "id": "flip-7",
+  "name": "Flip 7",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "The Op",
+  "players": [
+   3,
+   99
+  ],
+  "time": [
+   20,
+   20
+  ],
+  "age": 8,
+  "weight": 1.1,
+  "style": "Party",
+  "tags": [
+   "Push your luck",
+   "Card game",
+   "Quick"
+  ],
+  "notes": "Flip cards one at a time and stop before you draw a duplicate. Quick push-your-luck fun for any size group.",
+  "bgg": 420087
+ },
+ {
+  "id": "crazy-nines",
+  "name": "Crazy Nines",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Westant",
+  "players": [
+   2,
+   8
+  ],
+  "time": [
+   15,
+   20
+  ],
+  "age": 8,
+  "weight": 1.1,
+  "style": "Competitive",
+  "tags": [
+   "Card game",
+   "Golf scoring"
+  ],
+  "notes": "Swap and flip cards to keep your score as low as possible over nine holes. Plays like golf."
+ },
+ {
+  "id": "jenga",
+  "name": "Jenga",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Hasbro",
+  "players": [
+   1,
+   99
+  ],
+  "time": [
+   5,
+   20
+  ],
+  "age": 6,
+  "weight": 1.1,
+  "style": "Party",
+  "tags": [
+   "Dexterity",
+   "Quick"
+  ],
+  "notes": "Pull a block, stack it on top, and don't be the one who topples the tower. A good break between bigger games.",
+  "bgg": 2452
+ },
+ {
+  "id": "the-mind",
+  "name": "The Mind",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "Pandasaurus Games",
+  "players": [
+   2,
+   4
+  ],
+  "time": [
+   15,
+   20
+  ],
+  "age": 8,
+  "weight": 1.1,
+  "style": "Co-op",
+  "tags": [
+   "Card game",
+   "Quick"
+  ],
+  "bgg": 244992,
+  "notes": "Play numbered cards in rising order as a team, without saying a word. Simple to learn and surprisingly tense."
+ },
+ {
+  "id": "magical-athlete",
+  "name": "Magical Athlete",
+  "kind": "standalone",
+  "parent": null,
+  "publisher": "CMYK",
+  "players": [
+   2,
+   6
+  ],
+  "time": [
+   30,
+   30
+  ],
+  "age": 6,
+  "weight": 1.2,
+  "style": "Competitive",
+  "tags": [
+   "Racing",
+   "Dice rolling",
+   "Party"
+  ],
+  "notes": "Draft a team of racers with game-breaking powers, then roll dice to race them over four rounds. Chaotic and quick to learn."
+ }
+]

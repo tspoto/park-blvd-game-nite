@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vote · Park Blvd Game Nite</title>
+<meta name="description" content="Pick your top three games and every date that might work.">
+<meta name="theme-color" content="#3F3A60">
+<link rel="icon" href="assets/die.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href="./">
+      <img class="brand__mark" src="assets/die.svg" alt="">
+      <span class="brand__text">
+        <span class="brand__name">Park Blvd Game Nite</span>
+        <span class="brand__season" data-season></span>
+      </span>
+    </a>
+    <nav class="tabs" aria-label="Pages">
+      <a class="tab" href="./">Home</a>
+      <a class="tab" href="games.html">Games</a>
+      <a class="tab" href="vote.html" aria-current="page">Vote</a>
+    </nav>
+  </div>
+</header>
+<main class="main">
+  <section class="intro">
+    <span class="eyebrow" id="roundEyebrow">Your ballot</span>
+    <h1 id="voteH">Vote</h1>
+    <p class="lede" id="voteLede">Pick your top three games and every Saturday that might work. Voting isn't a promise to come.</p>
+  </section>
+
+  <div class="notice" id="closedNotice" hidden><b>Voting isn't connected yet.</b> You can fill this out, but it can't be sent until the ballot box is set up.</div>
+  <div class="notice" id="exampleNotice" hidden><b>Placeholder dates.</b> These dates are examples until the real schedule is set.</div>
+
+  <section class="panel" id="notOpen" hidden aria-live="polite"></section>
+
+  <form id="ballot" class="list" novalidate hidden>
+    <section class="panel" aria-labelledby="gamesH">
+      <div class="section-head">
+        <h2 id="gamesH">Top three games</h2>
+        <p class="hint">First choice gets 3 points, second 2, third 1.</p>
+      </div>
+      <div class="slots" id="slots"></div>
+      <div class="field">
+        <label class="label" for="pickSearch">Add a game</label>
+        <input id="pickSearch" type="search" placeholder="Search the shelf" autocomplete="off">
+      </div>
+      <div class="picker__list" id="pickList"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="datesH">
+      <div class="section-head">
+        <h2 id="datesH">Saturdays that might work</h2>
+        <p class="hint">Check every one you could make. Not sure yet? Pick what might work and update later.</p>
+      </div>
+      <div class="checks" id="dates"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="whoH">
+      <div class="field">
+        <label class="label" for="name" id="whoH">Your name</label>
+        <input id="name" type="text" autocomplete="given-name" maxlength="60" placeholder="First name is fine">
+        <p class="hint">Vote again with the same name to update your ballot anytime before it closes.</p>
+      </div>
+      <div class="field">
+        <label class="label" for="note">Anything else? <span class="hint">(optional)</span></label>
+        <textarea id="note" maxlength="500" placeholder="Arriving late, bringing snacks, a game you'd rather skip"></textarea>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button class="btn" type="submit" id="send">Send my ballot</button>
+    </div>
+    <p class="error" id="formError" role="alert" hidden></p>
+  </form>
+
+  <section class="panel" id="thanks" hidden aria-live="polite">
+    <h2>Ballot sent</h2>
+    <p id="thanksText"></p>
+    <p class="hint">Standings on the home page update twice a day.</p>
+    <div class="actions">
+      <a class="btn" href="./">See standings</a>
+      <button class="btn btn--secondary" type="button" id="editAgain">Change my ballot</button>
+    </div>
+  </section>
+</main>
+<script src="assets/config.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/vote.js"></script>
+</body>
+</html>
