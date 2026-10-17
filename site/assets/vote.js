@@ -124,6 +124,7 @@
   }
 
   Promise.all([P.loadJSON("data/games.json"), P.loadSeason()]).then(function (res) {
+    document.getElementById("loading").hidden = true;
     LIB = P.indexGames(res[0]);
     const season = res[1];
     if (season.example) document.getElementById("exampleNotice").hidden = false;
@@ -140,6 +141,7 @@
     renderAll();
     form.hidden = false;
   }).catch(function () {
+    document.getElementById("loading").hidden = true;
     const box = document.getElementById("notOpen");
     box.innerHTML = '<p class="empty">The ballot didn\'t load. Refresh the page to try again.</p>';
     box.hidden = false;

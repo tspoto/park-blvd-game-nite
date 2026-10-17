@@ -39,6 +39,8 @@
   <div class="notice" id="closedNotice" hidden><b>Voting isn't connected yet.</b> You can fill this out, but it can't be sent until the ballot box is set up.</div>
   <div class="notice" id="exampleNotice" hidden><b>Placeholder dates.</b> These dates are examples until the real schedule is set.</div>
 
+  <div class="loader" id="loading" role="status"><span class="loader__spin" aria-hidden="true"></span>Loading the ballot…</div>
+
   <section class="panel" id="notOpen" hidden aria-live="polite"></section>
 
   <form id="ballot" class="list" novalidate hidden>
@@ -84,7 +86,7 @@
   <section class="panel" id="thanks" hidden aria-live="polite">
     <h2>Ballot sent</h2>
     <p id="thanksText"></p>
-    <p class="hint">Standings on the home page update twice a day.</p>
+    <p class="hint">It shows up in the standings on the home page right away.</p>
     <div class="actions">
       <a class="btn" href="./">See standings</a>
       <button class="btn btn--secondary" type="button" id="editAgain">Change my ballot</button>

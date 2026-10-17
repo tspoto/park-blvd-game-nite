@@ -40,7 +40,7 @@ function doGet() {
 function tallyRows_(rows, now) {
   const latest = {};
   rows.forEach(function (r) {
-    const round = String(r[1] || ''), key = r[3];
+    const round = asText_(r[1], 'yyyy-MM'), key = r[3];
     if (!round || !key) return;
     const id = round + '|' + key, t = new Date(r[0]).getTime();
     if (!latest[id] || t >= latest[id].t) latest[id] = { t: t, round: round, row: r };
@@ -58,7 +58,7 @@ function tallyRows_(rows, now) {
       g.picks += 1;
       if (i === 0) g.first += 1;
     });
-    String(r[7] || '').split(',').map(function (s) { return s.trim(); }).filter(Boolean).forEach(function (d) {
+    asText_(r[7], 'yyyy-MM-dd').split(',').map(function (s) { return s.trim(); }).filter(Boolean).forEach(function (d) {
       out.nights[d] = (out.nights[d] || 0) + 1;
     });
   });
@@ -82,7 +82,19 @@ function sheet_() {
     sh.appendRow(HEADERS);
     sh.setFrozenRows(1);
   }
+  // Sheets turns "2026-12" into a date unless the column is plain text
+  sh.getRange('B:B').setNumberFormat('@');
+  sh.getRange('H:H').setNumberFormat('@');
   return sh;
+}
+
+// Rows saved before the columns were plain text come back as dates.
+// Sheets dates don't always pass instanceof Date, so check for getTime instead.
+function asText_(value, format) {
+  if (value && typeof value.getTime === 'function') {
+    return Utilities.formatDate(value, Session.getScriptTimeZone(), format);
+  }
+  return String(value || '');
 }
 
 // Anything starting with = + - @ would turn into a formula, so prefix it with an apostrophe

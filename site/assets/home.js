@@ -76,11 +76,11 @@
       (rows ? '<div class="rank">' + rows + "</div>" : '<p class="hint">Nobody voted this month, so the group will pick on the night.</p>') + "</section>";
   }
   function standingsPanel(r, season) {
-    const voters = r.tally.voters || 0, when = updatedLabel(season.updated);
-    const head = voters ? voters + (voters === 1 ? " ballot" : " ballots") + " so far" + (when ? ". Updated " + P.esc(when) + "." : ".") : "No ballots yet.";
+    const voters = r.tally.voters || 0, when = season.live ? "" : updatedLabel(season.updated);
+    const head = voters ? voters + (voters === 1 ? " ballot" : " ballots") + " so far" + (when ? ". Last updated " + P.esc(when) + "." : ".") : "No ballots yet.";
     const rows = gameRows(r, 5);
     return '<section class="panel" aria-labelledby="leadH-' + r.id + '"><div class="section-head"><span class="eyebrow">' + P.esc(r.label) + " standings</span>" +
-      '<h2 id="leadH-' + r.id + '">Leading so far</h2><p class="hint">' + head + " Standings update twice a day.</p></div>" +
+      '<h2 id="leadH-' + r.id + '">Leading so far</h2><p class="hint">' + head + "</p></div>" +
       (rows ? '<div class="rank">' + rows + "</div>" : '<p>Be the first to vote. <a class="text-link" href="vote.html">Vote now</a></p>') +
       '<h3>Saturdays</h3><div class="rank">' + dateRows(r) + "</div></section>";
   }

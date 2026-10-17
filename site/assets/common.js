@@ -93,8 +93,25 @@
     if (t <= lead) return "set";
     return "played";
   }
+  // Live totals straight from the Apps Script. Falls back to the twice-daily copy if Google is slow or down.
+  function loadResults() {
+    const url = (CFG.voteEndpoint || "").trim();
+    const backup = function () { return loadJSON("data/results.json"); };
+    if (!url) return backup();
+    const ctrl = window.AbortController ? new AbortController() : null;
+    const timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 8000) : null;
+    return fetch(url, ctrl ? { signal: ctrl.signal } : {}).then(function (r) {
+      if (!r.ok) throw new Error("Apps Script returned " + r.status);
+      return r.json();
+    }).then(function (j) {
+      if (!j || typeof j.rounds !== "object") throw new Error("Unexpected totals");
+      j.live = true;
+      return j;
+    }).catch(backup).then(function (j) { clearTimeout(timer); return j; });
+  }
+
   function loadSeason() {
-    return Promise.all([loadJSON("data/schedule.json"), loadJSON("data/results.json")]).then(function (res) {
+    return Promise.all([loadJSON("data/schedule.json"), loadResults()]).then(function (res) {
       const sched = res[0], results = res[1] || {}, t = today();
       const rounds = (sched.rounds || []).slice().sort(function (a, b) { return a.votingOpens.localeCompare(b.votingOpens); }).map(function (r) {
         const tally = (results.rounds && results.rounds[r.id]) || { voters: 0, games: [], nights: [] };
@@ -102,7 +119,7 @@
         return Object.assign({}, r, { tally: tally, lead: lead, status: roundStatus(r, lead, t) });
       });
       return {
-        example: !!sched.example, sample: !!results.sample, updated: results.updated, today: t, rounds: rounds,
+        example: !!sched.example, sample: !!results.sample, live: !!results.live, updated: results.updated, today: t, rounds: rounds,
         current: rounds.filter(function (r) { return r.status !== "played"; })[0] || null,
         open: rounds.filter(function (r) { return r.status === "voting"; })[0] || null,
         next: function (round) { const i = rounds.indexOf(round); return i === -1 ? null : rounds[i + 1] || null; }
