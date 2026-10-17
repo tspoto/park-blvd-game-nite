@@ -1,0 +1,84 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # ~7am and 7pm Eastern. Cron is UTC, so it shifts an hour with daylight saving.
+    - cron: "7 0,12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write   # to commit results.json
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pull the latest vote totals
+        env:
+          VOTE_API_URL: ${{ vars.VOTE_API_URL }}
+        run: |
+          if [ -z "$VOTE_API_URL" ]; then
+            echo "VOTE_API_URL isn't set yet, so the site ships with the committed results.json."
+            exit 0
+          fi
+          if curl -fsSL "$VOTE_API_URL" -o /tmp/results.json \
+             && jq -e '(.rounds | type == "object")' /tmp/results.json > /dev/null; then
+            cp /tmp/results.json site/data/results.json
+            echo "Counted $(jq '[.rounds[].voters] | add // 0' site/data/results.json) ballots."
+          else
+            echo "::warning::Couldn't read vote totals. Shipping the committed results.json instead."
+          fi
+
+      # GitHub pauses scheduled workflows after 60 days with no commits, so commit the totals
+      # when they change, and push an empty commit if it's been quiet for 30 days.
+      - name: Save vote totals to the repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git cat-file -e HEAD:site/data/results.json 2>/dev/null; then
+            git show HEAD:site/data/results.json | jq -S 'del(.updated)' > /tmp/old.json
+          else
+            echo '{}' > /tmp/old.json
+          fi
+          jq -S 'del(.updated)' site/data/results.json > /tmp/new.json
+          age_days=$(( ( $(date +%s) - $(git log -1 --format=%ct) ) / 86400 ))
+          if ! cmp -s /tmp/old.json /tmp/new.json; then
+            msg="Update vote totals"
+          elif [ "$age_days" -ge 30 ]; then
+            msg="Keep scheduled updates running"
+          else
+            echo "Totals unchanged and the last commit is $age_days days old. Nothing to save."
+            exit 0
+          fi
+          git add site/data/results.json
+          git commit --allow-empty --quiet -m "$msg"
+          if git pull --rebase --quiet origin "$GITHUB_REF_NAME" && git push --quiet origin "HEAD:$GITHUB_REF_NAME"; then
+            echo "$msg"
+          else
+            echo "::warning::Couldn't save totals to the repo. The site still deploys with the latest totals."
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
