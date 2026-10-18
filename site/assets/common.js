@@ -143,9 +143,10 @@
   function getDraft() { const d = readStore(DRAFT_KEY, []); return Array.isArray(d) ? d.slice(0, 3) : []; }
   function setDraft(ids) { writeStore(DRAFT_KEY, ids.slice(0, 3)); }
 
-  // Apps Script doesn't send CORS headers, so we can't read the response. Fire and forget.
+  // A plain string body keeps this a "simple" request, so there's no preflight and we can read the reply.
+  // Resolves with the script's { ok, error } reply. Rejects only if the request never made it.
   function send(payload) {
-    return fetch(CFG.voteEndpoint, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(payload) });
+    return fetch(CFG.voteEndpoint, { method: "POST", body: JSON.stringify(payload) }).then(function (r) { return r.json(); });
   }
   function canSend() { return !!(CFG.voteEndpoint || "").trim(); }
 

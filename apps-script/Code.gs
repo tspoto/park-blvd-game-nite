@@ -1,16 +1,20 @@
 // Ballot box for Park Blvd Game Nite.
 // Lives in the Apps Script editor of the ballots Google Sheet, deployed as a web app.
-// POST adds a ballot. GET returns vote totals for the GitHub action. Names never leave the sheet.
+// POST adds a ballot. GET returns vote totals for the site and the GitHub action. Names never leave the sheet.
+//
+// The voting PIN lives in Project Settings > Script Properties as VOTE_PIN, so it's not in the repo.
 
 const HEADERS = ['Received', 'Month', 'Name', 'Name key', 'Pick 1', 'Pick 2', 'Pick 3', 'Dates', 'Note'];
 const POINTS = [3, 2, 1];
+const LIMIT_PER_HOUR = 60;          // all ballots, including wrong PINs
+const LIMIT_PER_NAME_PER_HOUR = 5;
 
 function doPost(e) {
   let data;
   try {
     data = JSON.parse(e.postData.contents);
   } catch (err) {
-    return json_({ ok: false, error: 'Not valid JSON.' });
+    return json_({ ok: false, error: 'invalid' });
   }
 
   const name = clean_(data.name, 60);
@@ -18,17 +22,39 @@ function doPost(e) {
   const picks = ids_(data.picks, 3, /^[a-z0-9-]{1,80}$/);
   const dates = ids_(data.dates, 10, /^\d{4}-\d{2}-\d{2}$/);
   if (!name || !/^\d{4}-\d{2}$/.test(round) || !picks.length) {
-    return json_({ ok: false, error: 'Need a name, a month and at least one game.' });
+    return json_({ ok: false, error: 'invalid' });
   }
 
   const lock = LockService.getScriptLock();
   lock.waitLock(10000);
   try {
+    // Count every attempt, so guessing the PIN runs into the limit too
+    if (overLimit_(nameKey_(name))) return json_({ ok: false, error: 'busy' });
+    if (!pinMatches_(data.pin)) return json_({ ok: false, error: 'pin' });
     sheet_().appendRow([new Date(), round, name, nameKey_(name), picks[0] || '', picks[1] || '', picks[2] || '', dates.join(', '), clean_(data.note, 500)]);
   } finally {
     lock.releaseLock();
   }
   return json_({ ok: true });
+}
+
+// If VOTE_PIN isn't set, anyone can vote
+function pinMatches_(pin) {
+  const expected = PropertiesService.getScriptProperties().getProperty('VOTE_PIN');
+  if (!expected) return true;
+  return String(pin == null ? '' : pin).trim() === String(expected).trim();
+}
+
+// Counts ballots per hour in the script cache. Returns true once a limit is hit.
+function overLimit_(key) {
+  const cache = CacheService.getScriptCache();
+  const hour = Utilities.formatDate(new Date(), 'UTC', 'yyyyMMddHH');
+  const allKey = 'all|' + hour, nameKey = 'name|' + hour + '|' + key.slice(0, 60);
+  const counts = cache.getAll([allKey, nameKey]);
+  const all = Number(counts[allKey] || 0), mine = Number(counts[nameKey] || 0);
+  if (all >= LIMIT_PER_HOUR || mine >= LIMIT_PER_NAME_PER_HOUR) return true;
+  cache.putAll({ [allKey]: String(all + 1), [nameKey]: String(mine + 1) }, 3600);
+  return false;
 }
 
 function doGet() {

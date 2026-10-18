@@ -9,7 +9,7 @@
   const PTS = [3, 2, 1], ORD = ["First choice", "Second choice", "Third choice"];
 
   const form = document.getElementById("ballot");
-  const nameEl = document.getElementById("name"), noteEl = document.getElementById("note");
+  const nameEl = document.getElementById("name"), pinEl = document.getElementById("pin"), noteEl = document.getElementById("note");
   const search = document.getElementById("pickSearch");
   const errEl = document.getElementById("formError"), sendBtn = document.getElementById("send");
 
@@ -76,17 +76,31 @@
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     errEl.hidden = true;
-    const name = nameEl.value.trim();
+    const name = nameEl.value.trim(), pin = pinEl.value.trim();
     const dates = Array.prototype.map.call(document.querySelectorAll("#dates input:checked"), function (i) { return i.value; });
     if (!picks.length) { showError("Pick at least one game."); search.focus(); return; }
     if (!dates.length) { showError("Check at least one Saturday that might work."); return; }
     if (!name) { showError("Add your name so your ballot can be counted."); nameEl.focus(); return; }
+    if (!pin) { showError("Add the game night PIN from the group chat."); pinEl.focus(); return; }
     if (!P.canSend()) { showError("Voting isn't connected yet, so this can't be sent. Your picks are saved on this phone."); return; }
 
-    const ballot = { type: "ballot", round: ROUND.id, name: name, picks: picks.slice(0, 3), dates: dates, note: noteEl.value.trim() };
+    const ballot = { type: "ballot", round: ROUND.id, name: name, pin: pin, picks: picks.slice(0, 3), dates: dates, note: noteEl.value.trim() };
     sendBtn.disabled = true; sendBtn.textContent = "Sending…";
-    P.send(ballot).then(function () {
-      P.writeStore(P.LAST_KEY, { name: ballot.name });
+    P.send(ballot).then(function (reply) {
+      if (!reply || !reply.ok) {
+        const err = reply && reply.error;
+        if (err === "pin") {
+          P.writeStore(P.LAST_KEY, { name: name });
+          pinEl.focus();
+          showError("That PIN doesn't match. Check the group chat for the current one.");
+        } else if (err === "busy") {
+          showError("Too many ballots came in the last hour. Try again in a bit.");
+        } else {
+          showError("Your ballot didn't go through. Try again, and if it keeps happening, let Tony know.");
+        }
+        return;
+      }
+      P.writeStore(P.LAST_KEY, { name: name, pin: pin });
       const names = ballot.picks.map(function (id) { return LIB.byId[id].name; });
       document.getElementById("thanksText").textContent = "Thanks, " + ballot.name + ". You picked " + names.join(", ") + ", and " +
         (dates.length === ROUND.options.length ? "any of the dates work." : dates.map(function (d) { return P.dateLabel(d); }).join(" or ") + " might work.");
@@ -137,6 +151,7 @@
     P.setDraft(picks);
     const last = P.readStore(P.LAST_KEY, null);
     if (last && last.name) nameEl.value = last.name;
+    if (last && last.pin) pinEl.value = last.pin;
     renderDates([]);
     renderAll();
     form.hidden = false;
